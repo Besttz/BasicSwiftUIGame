@@ -16,7 +16,7 @@ struct CardView: View {
         .resizable()
         .aspectRatio( 1,contentMode: .fit)
         .cornerRadius(20)
-        .padding(10)
+        .padding(20)
         .background(bg.opacity(0.5))
         .cornerRadius(20)
     }

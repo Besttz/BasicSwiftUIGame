@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var money = 100
+    @State private var money = 1000
     @State private var num = [0,2,1]
     @State private var bg = [Color.white, Color.white, Color.white]
     var body: some View {
@@ -51,7 +51,23 @@ struct ContentView: View {
                 Spacer()
                 HStack{
                     Button(action: {
-                        self.money -= 15
+                        // reduce money
+                        self.money -= 20
+                        // Change color to White
+                        self.bg = self.bg.map {
+                            _ in Color.white
+                        }
+                        // Generate Random Num
+                        self.num = self.num.map(){ _ in
+                            Int.random(in: 0...2)
+                        }
+                        // Check Winning
+                        if self.num[0] == self.num[1] && self.num[1] == self.num[2] {
+                            self.bg = self.bg.map {
+                                _ in Color.green
+                            }
+                            self.money += 100
+                        }
                         
                     }) {
                         Text("Spin")
