@@ -37,6 +37,7 @@ struct ContentView: View {
                 }.scaleEffect(2).shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)
                 Spacer()
                 Text("Money: \(money)")
+                    .foregroundColor(Color.black)
                     .padding(10)
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(20)
