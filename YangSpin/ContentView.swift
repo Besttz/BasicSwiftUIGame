@@ -107,7 +107,7 @@ struct ContentView: View {
                     
                     Button(action: {
                         // reduce money
-                        self.money -= 100
+                        self.money -= 60
                         // Change color to White
                         self.bg = self.bg.map {
                             _ in Color.white
