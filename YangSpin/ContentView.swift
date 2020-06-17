@@ -25,6 +25,7 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
+                    .frame(height: 20.0)
                 HStack {
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
@@ -178,6 +179,7 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
+                    .frame(height: 20.0)
             }
         }
     }
